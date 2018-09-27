@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/image_view_album"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/image_view_album"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_view_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:maxLines="1"
+            android:text="song"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="say" />
+
+        <TextView
+            android:id="@+id/text_view_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="asdfasdfsadf"
+            android:textColor="#ab000000"
+            android:textSize="14sp"
+            tools:text="Through the window" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_play_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/button_play_last"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/remote_view_music_player_select">
+
+            <ImageView
+                android:id="@+id/image_view_play_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_remote_view_play_last" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/button_play_toggle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/remote_view_music_player_select">
+
+            <ImageView
+                android:id="@+id/image_view_play_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_remote_view_play" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/button_play_next"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/remote_view_music_player_select">
+
+            <ImageView
+                android:id="@+id/image_view_play_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_remote_view_play_next" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/button_close"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/remote_view_music_player_select">
+
+            <ImageView
+                android:id="@+id/image_view_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_remote_view_close" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg_color_black">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/right_slide_close"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:scaleType="center"
+            android:src="@mipmap/fork" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/search"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:scaleType="center"
+            android:src="@mipmap/search_white"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/logo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/weread_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/title_logo_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/logo_iv">
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="0.5dp"
+            android:background="@color/setting_act_textcolor_common"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/weread_signature"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="0.5dp"
+            android:background="@color/setting_act_textcolor_common"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/column_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/title_logo_cl">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/home_page_tv"
+            style="@style/MenuColumnStyle"
+            android:text="首   页" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/words_tv"
+            style="@style/MenuColumnStyle"
+            android:layout_marginTop="16dp"
+            android:text="文   字" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/voice_tv"
+            style="@style/MenuColumnStyle"
+            android:layout_marginTop="16dp"
+            android:text="声   音" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/video_tv"
+            style="@style/MenuColumnStyle"
+            android:layout_marginTop="16dp"
+            android:text="影   像" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/calendar_tv"
+            style="@style/MenuColumnStyle"
+            android:layout_marginTop="16dp"
+            android:text="单向历" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Powered by OWSPACE"
+        android:textColor="#ff888888"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/column_ll" />
+</android.support.constraint.ConstraintLayout>

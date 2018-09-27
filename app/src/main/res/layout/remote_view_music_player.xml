@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <ImageView
+        android:id="@+id/image_view_album"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher" />
+
+    <FrameLayout
+        android:id="@+id/button_close"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/remote_view_music_player_select">
+
+        <ImageView
+            android:id="@+id/image_view_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_remote_view_close" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/image_view_album"
+        android:layout_toStartOf="@id/button_close"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:text="say" />
+
+    <TextView
+        android:id="@+id/text_view_artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_name"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_toEndOf="@id/image_view_album"
+        android:layout_toStartOf="@id/button_close"
+        android:maxLines="1"
+        android:textColor="#ab000000"
+        android:textSize="14sp"
+        tools:text="through the window " />
+
+    <LinearLayout
+        android:id="@+id/layout_play_controls"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/image_view_album"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/button_play_last"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/remote_view_music_player_select">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/image_view_play_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_remote_view_play_last" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/button_play_toggle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/remote_view_music_player_select">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/image_view_play_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_remote_view_play" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/button_play_next"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/remote_view_music_player_select">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/image_view_play_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_remote_view_play_next" />
+        </FrameLayout>
+
+    </LinearLayout>
+</RelativeLayout>

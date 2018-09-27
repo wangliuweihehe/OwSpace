@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/type_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingTop="18dp"
+    android:paddingEnd="14dp"
+    android:paddingBottom="20dp"
+    tools:ignore="RtlSymmetry">
+
+    <ImageView
+        android:id="@+id/image_iv"
+        android:layout_width="91dp"
+        android:layout_height="67dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/arrow_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/arrow_right_grey"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="4dp"
+        android:maxLines="2"
+        android:minLines="2"
+        android:textColor="@color/item_column_page_textcolor_title"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/image_iv" />
+
+    <TextView
+        android:id="@+id/author_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/item_column_page_textcolor_author"
+        app:layout_constraintLeft_toRightOf="@id/image_iv"
+        app:layout_constraintTop_toBottomOf="@id/title_tv" />
+</android.support.constraint.ConstraintLayout>

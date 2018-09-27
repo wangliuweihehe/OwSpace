@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.MainActivity">
+
+    <com.wlw.admin.owspace.view.widget.VerticalViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shadow">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/Left_slide"
+            android:layout_width="?actionBarSize"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@mipmap/column"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/right_slide"
+            android:layout_width="?actionBarSize"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@mipmap/person"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_title"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/Left_slide"
+            app:layout_constraintRight_toLeftOf="@id/right_slide"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RelativeOverlap" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

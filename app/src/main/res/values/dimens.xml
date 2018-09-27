@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="parallax_image_height">230dp</dimen>
+    <dimen name="title_bar_height">45dip</dimen>
+    <dimen name="setting_menu_item_height">42dp</dimen>
+</resources>
